@@ -1,0 +1,3 @@
+projet_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: projetBundle:Default:index }

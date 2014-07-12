@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Equip" table="equip">
+    <indexes>
+      <index name="FK_QUIPE_ASSOCIATI_CHEF_D_E" columns="che_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nom" type="string" column="nom" length="254" nullable="true"/>
+    <field name="ville" type="string" column="ville" length="254" nullable="true"/>
+    <field name="gouvernorat" type="string" column="Gouvernorat" length="254" nullable="true"/>
+    <many-to-one field="che" target-entity="ChefDEnquete">
+      <join-columns>
+        <join-column name="che_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,30 @@
+equip:
+    pattern:  /
+    defaults: { _controller: "projetBundle:Equip:index" }
+
+equip_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "projetBundle:Equip:show" }
+
+equip_new:
+    pattern:  /new
+    defaults: { _controller: "projetBundle:Equip:new" }
+
+equip_create:
+    pattern:  /create
+    defaults: { _controller: "projetBundle:Equip:create" }
+    requirements: { _method: post }
+
+equip_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "projetBundle:Equip:edit" }
+
+equip_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "projetBundle:Equip:update" }
+    requirements: { _method: post|put }
+
+equip_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "projetBundle:Equip:delete" }
+    requirements: { _method: post|delete }

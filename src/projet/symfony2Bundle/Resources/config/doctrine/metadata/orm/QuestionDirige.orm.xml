@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="QuestionDirige" table="question_dirige">
+    <indexes>
+      <index name="K_QUESTION_ASSOCIATI_QUESTION" columns="Que_id"/>
+      <index name="CHOIX_DI" columns="choix_dirige_id"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="intitule" type="string" column="intitule" length="254" nullable="true"/>
+    <field name="typeChoix" type="string" column="type_choix" length="254" nullable="true"/>
+    <field name="textAide" type="string" column="text_aide" length="254" nullable="true"/>
+    <many-to-one field="que" target-entity="Questionnaire">
+      <join-columns>
+        <join-column name="Que_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="choixDirige" target-entity="ChoixDirige">
+      <join-columns>
+        <join-column name="choix_dirige_id" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,11 @@
+projet:
+    resource: "@projetBundle/Resources/config/routing.yml"
+    prefix:   /
+projetBundle_equip:
+        resource: "@projetBundle/Resources/config/routing/equip.yml"
+        prefix:   /equip
+        
+projetBundle_chefdenquete:
+        resource: "@projetBundle/Resources/config/routing/chefdenquete.yml"
+        prefix:   /chefdenquete
+

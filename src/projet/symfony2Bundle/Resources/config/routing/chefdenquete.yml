@@ -1,0 +1,30 @@
+chefdenquete:
+    pattern:  /
+    defaults: { _controller: "projetBundle:ChefDEnquete:index" }
+
+chefdenquete_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "projetBundle:ChefDEnquete:show" }
+
+chefdenquete_new:
+    pattern:  /new
+    defaults: { _controller: "projetBundle:ChefDEnquete:new" }
+
+chefdenquete_create:
+    pattern:  /create
+    defaults: { _controller: "projetBundle:ChefDEnquete:create" }
+    requirements: { _method: post }
+
+chefdenquete_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "projetBundle:ChefDEnquete:edit" }
+
+chefdenquete_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "projetBundle:ChefDEnquete:update" }
+    requirements: { _method: post|put }
+
+chefdenquete_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "projetBundle:ChefDEnquete:delete" }
+    requirements: { _method: post|delete }
